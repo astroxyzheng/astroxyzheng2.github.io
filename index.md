@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Xueying Zheng 
+=======
+title: Xueying Zheng
+>>>>>>> af933fb29cb7874559d2645872bd8af94e8bd9ab
 feature_text: |
   ## Alembic
   the cosmos is full of uncontrollable events but therefore fantastic.
