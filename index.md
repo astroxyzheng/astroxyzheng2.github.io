@@ -3,7 +3,7 @@ title: About Xueying Zheng
 feature_text: |
   ## Xueying
   the cosmos is full of uncontrollable events but therefore fantastic.
-feature_image: "https://m.qpic.cn/psb?/V13VjPAX1QHTNC/GFrozXcOXTeV7N9g0Nxn26gRpZd8HnJmnru2LxZPjXo!/b/dFQBAAAAAAAA&bo=oAVtAgAAAAARB*o!&rf=viewer_4"
+feature_image: "http://i1.fuimg.com/705093/8d266bf048566423.jpg"
 excerpt: "At the starting point for [my graduated study](https://jekyllrb.com/) projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it."
 ---
 
