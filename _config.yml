@@ -1,29 +1,65 @@
-# Site Build Settings
-
-# Jekyll-paginate-v2 configuration
-#  pagination:
-#   enabled: true
-#   per_page: 5
-#   permalink: '/page/:num/'
-#   title: ':title - page :num of :max'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
-
-# jekyll-paginate configuration
-paginate:            5
+title: Ezora Theme!
+email: git@ezrasavard.com
+greeting: Welcome to the Ezora Sample Site
+description: > # this means to ignore newlines until another tag
+    Ezora is a responsive Jekyll theme with a clean single column layout, nifty text overlays for images and a mobile friendly navigation bar.
+github:  ezrasavard
+linkedin: ezrasavard
+favicon: favicon.png
+navlinks:
+    -
+        text: Home
+        url: /
+        internal: True
+    -
+        text: Sample Page
+        url: /sample
+        internal: True
+    -
+        text: Github
+        url: https://www.github.com/ezrasavard
+        internal: False
+    -
+        text: LinkedIn
+        url: https://www.linkedin.com/in/ezrasavard
+        internal: False
 
 # Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           none
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+paginate: 3
+baseurl: "/ezora-jekyll-theme" # the subpath of your site, e.g. /blog/
+#baseurl: ""
+url: "https://ezrasavard.github.io" # the base hostname & protocol for your site
+highlights: pygments
+permalink: posts/:title/
+include: ["_pages"]
+plugins: [jekyll-paginate]
+markdown: kramdown
+excerpt_separator: "<!--more-->"
+sass:
+    sass_dir: _sass
+    style: compressed
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Lagrange'
-description:	       'a minimalist Jekyll theme'
-author:              'Paul Le'
-
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+# cover images are expected to be 900px by 240px, or at least 15:4 aspect ratio
+# thumbnails look best with 3:1 or 5:2 ratios in this layout.
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: "default"
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            author: "Ezra Savard"
+            cover: "/media/header.jpg"
+            layout: "post"
+    -
+        scope:
+            path: ""
+            type: "pages"
+        values:
+            author: "Ezra Savard"
+            cover: "/media/header.jpg"
+            layout: "default"
