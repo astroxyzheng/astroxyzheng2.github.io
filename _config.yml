@@ -1,20 +1,58 @@
 # Site settings
-title: Mauricio Urraco
-description: Jekyll Theme Minimal Resume
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: Jekyll Doc Theme
+email: your-email@domain.com
+description: >
+  Jekyll Template for Project Websites
+  providing documentation and blog post pages.
+lang: en-US
 
-# User settings
-username: Mauricio Urraco
-user_description: I\'m a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I have been immersed in the <b>crypto-world</b> working for Radix, a London based startup trying to create the next massive scalable DLT. I'm one of the two guys behind all the JS related stuff. Visit my blog here <a href="https://mauriciourraco.com" target="_blank">https://mauriciourraco.com</a>
-user_title: Software Engineer
-email: mauriurraco@gmail.com
-# twitter_username: lorem_ipsum
-# github_username:  lorem_ipsum
-# gplus_username:  lorem_ipsum
+baseurl: "/jekyll-doc-theme" # the subpath of your site, e.g. /blog/
+url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
+git_address: https://github.com/aksakalli/jekyll-doc-theme
+git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
 
-# Google-analytics
-google-analytics:
-  id: ""
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
 
-exclude: ['package.json', 'src' , 'node_modules']
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+timezone: Europe/Berlin
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true

@@ -1,94 +1,95 @@
-# Jekyll Resume Theme
+# Jekyll Doc Theme
 
-Live demo at https://jekyll-theme-minimal-resume.netlify.com/
+Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/24d80ae8-c3d9-4645-a6d8-9e97fc8dec3c/deploy-status)](https://app.netlify.com/sites/jekyll-theme-minimal-resume/deploys)
+## Running locally
 
-# Stack
+You need Ruby and gem before starting, then:
 
-![](https://img.shields.io/badge/jekyll-✓-blue.svg)
-![](https://img.shields.io/badge/html5-✓-blue.svg)
-![](https://img.shields.io/badge/sass-✓-blue.svg)
-![](https://img.shields.io/badge/sweet--scroll-✓-blue.svg)
-![](https://img.shields.io/badge/particle--js-✓-blue.svg)
-![](https://img.shields.io/badge/font--awesome-✓-blue.svg)
-![](https://img.shields.io/badge/devicon-✓-blue.svg)
-![](https://img.shields.io/badge/gulp-✓-blue.svg)
+```bash
+# install bundler
+gem install bundler
 
-***
+# clone the project
+git clone https://github.com/aksakalli/jekyll-doc-theme.git
+cd jekyll-doc-theme
 
-<h3 align="center">Please help this repo with a :star: if you find it useful! :blush:</h3>
+# install dependencies
+bundle install
 
-***
-
-# Screenshot
-
-<p align="center">
-  <img src="https://github.com/murraco/jekyll-theme-minimal-resume/blob/master/screenshot.png" width="90%" />
-</p>
-
-# Quick Setup
-
-1. Install Jekyll: `gem install jekyll bundler`
-2. For this repository and clone your fork
-3. Edit `_config.yml` to personalize your site
-
-# Settings
-
-You have to fill some informations on `_config.yml` to customize your site:
-
-## Site settings
-```yml
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+# run jekyll with dependencies
+bundle exec jekyll serve
 ```
 
-## User settings
-```yml
-username: Lorem Ipsum
-user_description: Software Engineer at Lorem Ipsum Dolor
-user_title: Mauricio Urraco
-email: mauriurraco@gmail.com
+## Docker
+
+Alternatively, you can deploy it using the multi-stage [Dockerfile](Dockerfile)
+that serves files from Nginx for better performance in production.
+
+Build the image for your site's `JEKYLL_BASEURL`:
+
+```
+docker build --build-arg JEKYLL_BASEURL="/your-base/url" -t jekyll-doc-theme .
 ```
 
-> Don't forget to change your URL before you deploy your site!
+(or leave it empty for root: `JEKYLL_BASEURL=""`) and serve it:
 
-# Color and Particle Customization
-
-- Color Customization
-  - Edit the `.sass` variables
-- Particle Customization
-  - Edit the json data in particle function in `app.js`
-  - Refer to `Particle.js` for help
-  
-# Content
-
-You can (and should) edit the `.html` files for adding your own information, icons, working experience, social links or whatever you want to add. I.e.:
-
-```html
-<a aria-label="My Github" target="_blank" href="https://github.com/murraco">
-  <i class="icon fa fa-github-alt" aria-hidden="true"></i>
-</a>
+```
+docker run -p 8080:80 jekyll-doc-theme
 ```
 
-# Running locally
+## Projects using Jekyll Doc Theme
 
-In order to compile the assets and run `Jekyll` locally you need to follow those steps:
+* http://teavm.org/
+* https://su2code.github.io/
+* https://launchany.github.io/mvd-template/
+* https://knowit.github.io/kubernetes-workshop/
+* https://rec.danmuji.org/
+* https://nethesis.github.io/icaro/
+* http://ai.cs.ucl.ac.uk/
+* http://tizonia.org
+* https://lakka-switch.github.io/documentation/
+* https://cs.anu.edu.au/cybersec/issisp2018/
+* http://www.channotation.org/
+* http://nemo.apache.org/
+* https://csuf-acm.github.io/
+* https://extemporelang.github.io/
+* https://media-ed-online.github.io/intro-web-dev-2018spr/
+* https://midlevel.github.io/MLAPI/
+* https://pulp-platform.github.io/ariane/docs/home/
+* https://koopjs.github.io/
+* https://developer.apiture.com/
+* https://contextmapper.github.io/
+* https://www.bruttin.com/CosmosDbExplorer/
+* http://mosaic-lopow.github.io/dash7-ap-open-source-stack/
+* http://www.vstream.ml/
+* http://docs.fronthack.com/
+* https://repaircafeportsmouth.org.uk/
+* http://brotherskeeperkenya.com/
+* https://hschne.at/Fluentast/
+* https://zoe-analytics.eu/
+* https://uli.kmz-brno.cz/
+* https://lime.software/
+* https://weft.aka.farm
+* https://microros.github.io/
+* https://citystoriesucla.github.io/citystories-LA-docs
+* http://lessrt.org/
+* http://kivik.io/
+* https://www.iot-kit.nl/
+* http://justindietz.com/
+* https://universalsplitscreen.github.io/
+* https://docs.oneflowcloud.com/
+* https://actlist.silentsoft.org/
+* https://teevid.github.io
+* https://developer.ipums.org
+* https://osmpersia.github.io (right-to-left)
+* https://ecmlpkdd2019.org
+* https://idle.land
+* https://mqless.com
+* https://muict-seru.github.io/
+* https://www.invoice-x.org
+* https://www.devops.geek.nz
 
-1. Install Jekyll
-2. Run `jekyll build`
-3. Start and http-server in the folder `_site`
+## License
 
-# Contribution
-
-- Report issues
-- Open pull request with improvements
-- Spread the word
-- Reach out to me directly at <mauriurraco@gmail.com>
-
-# Donate
-
-`btc: 36V7HqqENSKn6iFCBuE4iCdtB29uGoCKzN`
-
-`eth: 0xB419E3E9fa2233383E0877d442e55C34B9C944dD`
+Released under [the MIT license](LICENSE).
