@@ -2,17 +2,21 @@
 layout: default
 ---
 
-<article>
-    
-    {% if page.date %}
-        <h1 class="date">{{ page.date | date_to_string }}:</h1>
-    {% else %}
-        <h1 class="date">Some day, unknown to us...</h1>
-    {% endif %}
-    
+    <article id="main">
+  <header class="special container">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <section class="style4 wrapper container">
     {{ content }}
+  </section>
     
-    {% include related.html tags=page.tags %}
-
-
+    <footer>
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="post-prev">&larr; Previous post</a> {% endif %}
+        {% if page.next %}
+        <a href="{{ page.next.url }}" class="post-next">Next post &rarr;</a> {% endif %}
+    </footer>
 </article>
+

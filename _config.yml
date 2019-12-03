@@ -1,65 +1,14 @@
-title: Ezora Theme!
-email: git@ezrasavard.com
-greeting: Welcome to the Ezora Sample Site
-description: > # this means to ignore newlines until another tag
-    Ezora is a responsive Jekyll theme with a clean single column layout, nifty text overlays for images and a mobile friendly navigation bar.
-github:  ezrasavard
-linkedin: ezrasavard
-favicon: favicon.png
-navlinks:
-    -
-        text: Home
-        url: /
-        internal: True
-    -
-        text: Sample Page
-        url: /sample
-        internal: True
-    -
-        text: Github
-        url: https://www.github.com/ezrasavard
-        internal: False
-    -
-        text: LinkedIn
-        url: https://www.linkedin.com/in/ezrasavard
-        internal: False
+# Site settings
+title: Twenty Blog
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://locahost:4000" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
-paginate: 3
-baseurl: "/ezora-jekyll-theme" # the subpath of your site, e.g. /blog/
-#baseurl: ""
-url: "https://ezrasavard.github.io" # the base hostname & protocol for your site
-highlights: pygments
-permalink: posts/:title/
-include: ["_pages"]
-plugins: [jekyll-paginate]
 markdown: kramdown
-excerpt_separator: "<!--more-->"
-sass:
-    sass_dir: _sass
-    style: compressed
-
-# cover images are expected to be 900px by 240px, or at least 15:4 aspect ratio
-# thumbnails look best with 3:1 or 5:2 ratios in this layout.
-defaults:
-    -
-        scope:
-            path: ""
-        values:
-            layout: "default"
-    -
-        scope:
-            path: ""
-            type: "posts"
-        values:
-            author: "Ezra Savard"
-            cover: "/media/header.jpg"
-            layout: "post"
-    -
-        scope:
-            path: ""
-            type: "pages"
-        values:
-            author: "Ezra Savard"
-            cover: "/media/header.jpg"
-            layout: "default"
