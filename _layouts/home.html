@@ -5,25 +5,37 @@ title: Home
 <script type="text/javascript" src="//rf.revolvermaps.com/0/0/1.js?i=5abq1esh6am&s=220&m=0&v=false&r=false&b=ffffff&n=true&c=ff007e" async="async"></script>
 {% for post in paginator.posts %}
 
-
- .outer {
-        overflow: hidden;
-        border: 1px solid red;
-    }
-
-    .sidebar {
-        float: left;
-        width: 200px;
-        height: 150px;
-        background: #BCE8F1;
-    }
-
-    .content {
-        margin-left: 200px;
-        height: 100px;
-        background: #F0AD4E;
-    }
-
+<style>
+ *{margin:0;padding:0;}
+ #herder{
+     height:50px;
+     background:blue;
+ }
+ .main-left{
+     width:30%;
+     height:800px;
+     background:red;
+     float:left;
+ }
+ .main-right{
+     width:70%;
+     height:800px;
+     background:pink;
+     float:right;
+ }
+ #footer{
+     clear:both;
+     height:50px;
+     background:gray;
+}
+</style>
+</head>
+<body>
+<div id="herder">页头</div>
+<div class="main-left">左列</div>
+<div class="main-right">右列</div>
+</body>
+ 
 <div class="posts">
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
