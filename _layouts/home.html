@@ -6,6 +6,24 @@ title: Home
 {% for post in paginator.posts %}
 
 
+ .outer {
+        overflow: hidden;
+        border: 1px solid red;
+    }
+
+    .sidebar {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background: #BCE8F1;
+    }
+
+    .content {
+        margin-left: 200px;
+        height: 100px;
+        background: #F0AD4E;
+    }
+
 <div class="posts">
   <h1>
     <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
