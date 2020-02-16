@@ -12,7 +12,7 @@
     Tables
     Social media icons
 */
-.header {
+header {
   background-color: $bg-color;
   color: $text-color;
   position: absolute;
