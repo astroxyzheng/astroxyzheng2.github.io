@@ -23,6 +23,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           'Xueying Zheng (Ashley)'
 description:	       'A greenhand in astronomy'
 author:              'Xueying Zheng'
+header_image:         assets/img/mountains.jpg
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
