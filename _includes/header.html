@@ -3,6 +3,8 @@
 
   <div id="main" class="call-out"
        style="background-image: url('{{ site.header_image | relative_url }}')">
+    <a href="{{ site.github.url }}/">{{ site.title }}</a>
+    <small class="masthead-subtitle">{{ site.description }}</small>
     <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
     <br>
     <br>
@@ -14,22 +16,5 @@
 
 
 
-<header background:red class="masthead" style="background-image: url('{{ site.header_image | relative_url }}')">
-  <!--<h3 style="background:#000; color:#FFF" class="masthead-title">-->
-  <!--<div style="background:url(图片地址); width:100px;height:100px;">div>-->
-  <h2 font-size:12px; style="background:url(mountains.jpg); color:#FFF" class="masthead-title"
-    <br><br><br><br>
-     <h1 class="logo__heading">
-                    <a class="logo__link" href="/">
-                        Barnsley Council
-                    </a>
-                <div style="background:url(mountains.jpg);>
-                </div>
-                </h1>
-    <a href="{{ site.github.url }}/">{{ site.title }}</a>
-    <small class="masthead-subtitle">{{ site.description }}</small>
-    <br><br><br>
     {% include menu.html %}
-  </h2>
-</header>
 
