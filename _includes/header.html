@@ -3,18 +3,20 @@
 
   <div id="main" class="call-out"
        style="background-image: url('{{ site.header_image | relative_url }}')">
+    <h1 class="masthead-title"> 
     <a href="{{ site.github.url }}/">{{ site.title }}</a>
     <small class="masthead-subtitle">{{ site.description }}</small>
-    <h1> {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}} </h1>
+    {{ site.header_text | default: "Change <code>header_text</code> in <code>_config.yml</code>"}}
     <br>
     <br>
     <br>
-  </div>
 
-    
+      {% include menu.html %}
+  </h1>
+    </div>
 </header>
 
 
 
-    {% include menu.html %}
+  
 
