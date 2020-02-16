@@ -21,8 +21,8 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Xueying Zheng (Ashley)'
-description:	       'At the starting point for my graduated study projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately. Install it, configure it, tweak it, push it.'
-author:              'Paul Le'
+description:	       'A greenhand in astronomy'
+author:              'Xueying Zheng'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
