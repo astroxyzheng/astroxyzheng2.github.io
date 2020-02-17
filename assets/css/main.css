@@ -1,5 +1,6 @@
 /*
   Contents:
+    header (add by myself)
     Base
     Site container
     Masthead
@@ -12,7 +13,37 @@
     Tables
     Social media icons
 */
+.header {
+  background-color: $bg-color;
+  color: $text-color;
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  top: 0;
+  left: 0;
+  will-change: transform;
+  transition: transform .3s, background-color 0.5s ease;
+  transform: translateY(0%);
 
+  a {
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+
+  }
+
+  &.fix-nav {
+    position: fixed;
+    background-color: $bg-color;
+    transition: transform .3s, background-color 0.5s ease;
+    z-index: 5;
+  }
+
+  &.hide-nav {
+    transform: translateY(-120%);
+    transition: transform .3s;
+  }
+}
 
 /*
   Base
